@@ -10,75 +10,118 @@ body{
     color: #f6f0f0; 
 }
 
-.cabecera{
-    height: 100vh;
-    background-image: url("../assets/img/Sin\ título-1.webp");/**editar merjor la imagen - va a ir otra - buscar una que vaya con degradado para probar**/
+ /**main index**/
+ .main{
+    background-color: #808080;
+    text-align: center;
+    margin-bottom: 5rem;
+      
+}
+
+ .seccionUno{
+    /*display: flex;*/
+    height: 90vh;
+    background-image: url(../assets/img/art_1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
- }
-/** estilos logo**/
-.contenedorLogo{
-    width: 15%;
-    display: inline-block;
-      
-}
+    margin-bottom: 3rem;
 
-.logo{
-    width: 70%;
-}
-/** estilos navegación**/
-.navegacion{
-    display: inline-block;
-    width: 50%;
-    text-align: right;
-    margin-left: 30%;
-}
 
-.listaItem{
-    list-style: none;
-    display: inline-block;
-    padding-left: 30px;
-    padding-top: 0;
+}
+.seccionUno h1{
+    font-size: 5rem;
+    font-weight: bolder;
+    color: #474747;
+    margin: 5rem;
     
 }
-.linkNav{
+
+.seccionUno h2{
+    font-weight: bolder;
+    color: #474747;
+    margin-bottom: 5rem;
+}
+.seccionUno p{
+    color: #474747;
+    text-align: center;
+    font-weight: bolder;
+
+}
+.card a{
     text-decoration: none;
-    color: #f6f0f0;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: xx-large;
+    color: #808080;
 }
-
-.contenedorHeader{
-    margin:0 auto;
-    margin-top: 80px;
-    padding-bottom: 30px;
-    text-align: center;
-}
-
- /**main**/
-
- .main{
-    background-color: grey;
-    text-align: center;
-    
-    
-}
-.tarjetasGaleria{
-    text-align: center;
-    display: inline-block;
-}
-
-.tarjetasGaleria h2{
-    font-size: 2rem;
-    padding-top: 10px;
+.card-group{
+    column-gap: 10px;
+    border:10px #808080; 
 }
 
 .card{
-    width: 30%;
-    display: inline-block;
-    padding-left: 10px;
+    font-family: inherit;
+    font-weight: normal;
+    font-size: large;
+    color: #808080;
 }
 
+.card-img-top{
+    column-gap: 20px;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border: black 30px;
+}
+/*bio*/
+.izquierda{
+    height: 70vh;
+    background-image: url(../assets/img/retrato_bio1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #f6f0f0;
+
+}   
+
+.derecha{
+    height: 80vh;
+    background-color: rgb(51, 50, 50);
+    border: 3px solid #f6f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.seccionGaleria{
+    width: 90%;
+    margin:0 auto;
+    height: 85vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:0.5px solid gray;
+}
+
+.seccionGaleria img{
+    width: 0px;
+    height:100%;
+    flex-grow: 1;/*que dentro de la caja flexible ocupe todo el espacio que pueda*/
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .5s ease;
+}
+
+.seccionGaleria img:hover{
+    width: 30%;
+    opacity: 1;
+    filter:contrast(120%);
+}
 /** footer**/
 
  .footer{
@@ -92,10 +135,18 @@ body{
 }
 
 
-
-
-
-
+@media screen and (max-width: 768px){
+    .seccionGaleria{
+        flex-wrap: wrap;
+    }
+    .seccionGaleria img{
+        height: 80%;
+    }
+    .seccionGaleria img:hover{
+        width: 70%;
+        
+    }
+}
 
 
 
