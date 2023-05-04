@@ -10,45 +10,53 @@ body{
     color: #f6f0f0; 
 }
 
- /**main index**/
- .main{
-    background-color: #808080;
-    text-align: center;
-    margin-bottom: 5rem;
-      
-}
-
- .seccionUno{
-    /*display: flex;*/
-    height: 90vh;
-    background-image: url(../assets/img/art_1.jpg);
+.navbar-nav a:hover {
+    color: #333333;
+  }
+/* index sección1*/
+.content {
+    background-image: linear-gradient(to right, rgba(231, 203, 203, 0.13), rgba(0, 0, 0, 0.8)), url('../assets/img/art_1.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin-bottom: 3rem;
-
-
-}
-.seccionUno h1{
-    font-size: 5rem;
-    font-weight: bolder;
-    color: #474747;
-    margin: 5rem;
-    
-}
-
-.seccionUno h2{
-    font-weight: bolder;
-    color: #474747;
-    margin-bottom: 5rem;
-}
-.seccionUno p{
-    color: #474747;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .contenedor {
+    max-width: 800px;
     text-align: center;
-    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 20px; 
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: f6f0f0; 
+  }
 
-}
+ 
+  .portfolio-section {
+    margin-top: 50px;
+  }
+
 .card a{
     text-decoration: none;
     font-family: inherit;
@@ -73,8 +81,9 @@ body{
     width: 100%;
     height: 60%;
     object-fit: cover;
-    border: black 30px;
+    border-bottom: 10px solid #302f2f;
 }
+
 /*bio*/
 .izquierda{
     height: 80vh;
@@ -96,7 +105,7 @@ body{
     text-align: center;
     
 }
-
+/*portfolio*/
 .seccionGaleria{
     width: 90%;
     margin:0 auto;
@@ -105,7 +114,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border:0.5px solid gray;
+    border: 10px solid rgb(19, 18, 18);
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .seccionGaleria img{
@@ -122,6 +133,15 @@ body{
     opacity: 1;
     filter:contrast(120%);
 }
+
+.seccionGaleria:before {
+    content: attr(data-title);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 /** footer**/
 
  .footer{
@@ -135,6 +155,88 @@ body{
 }
 
 
+/*main contacto*/
+
+.contacto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../assets/img/art_4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+}
+
+.contacto-container h1, .contacto-container h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  max-width: 50%;
+  padding: 30px;
+  background-image: linear-gradient(to bottom right, #12131246, #413d3cda);
+  border-radius: 20px;
+}
+.contacto-container h1{
+  font-weight: bold;
+  font-size: xx-large;
+}
+.contacto-container h2{
+  font-size: large;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(5, 5, 5, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #808080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #423853
+}
+
+/*newsletter*/
+.news-section{
+  display: flex;
+  margin-top: 50px;
+  width: 80%;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 10%;
+}
+
+/* media queries*/
 @media screen and (max-width: 768px){
     .seccionGaleria{
         flex-wrap: wrap;
@@ -150,69 +252,111 @@ body{
 
 
 
+@media (max-width: 576px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .hero-section {
+      height: 300px;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 577px) and (max-width: 768px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .hero-section {
+      height: 400px;
+    }
+  
+    .card {
+      width: 50%;
+    }
+  }
+  
 
+  @media (min-width: 769px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .hero-section {
+      height: 500px;
+    }
+  
+    .card {
+      width: 33.33%;
+    }
+  }
 
+  
+  /* Estilos para pantallas entre 768px y 1199px */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    p {
+      display: none;
+    }
+  }
+  
+  /* Estilos para pantallas menores o iguales a 767px */
+  @media (max-width: 767px) {
+    p {
+      display: none;
+    }
+    h3{
+      display: none;
+    }
+  }
 
+  /*media portfolio*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**.colorFondo{
-    background-color: #808080;
+  @media (max-width: 768px) {
+    .seccionGaleria {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
     
-}
-.listaNavegacion {
-    list-style: none;
-    font-weight: 200;
-}
-.linkNav{
-    color: #f6f0f0;
-    text-decoration: none;
-}
-.fondoImagen{
-    background-color: #808080;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
-.tituloPrincipal{
-    font-size: 3rem;
-    text-align: center;
-}
-
-.icon{
-    color: #f6f0f0;
-    text-align: center;
-}
-.titulosGaleria{
-    color: #f6f0f0;
-    text-align: center;
-}
-.titulos{
-    text-align: center;
-}
-h1{
-    color: #f6f0f0;
-
-}
-
-p{ 
- color: #f6f0f0;
-}**/
+    .seccionGaleria img {
+      width: 100%;
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .seccionGaleria img:hover {
+      transform: scale(1.2);
+    }
+  }
+  /*media contacto*/
+  @media only screen and (max-width: 992px) {
+    /* Pantallas medianas */
+    h1 {
+      font-size: 1rem;
+      background-image: none;
+    }
+    h2 {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    /* Pantallas pequeñas */
+    h1{
+      font-size: 2rem;
+      background-image: none;
+    }
+    h2 {
+      display: none;
+      background-image: none;
+    }
+    form {
+      margin-top: 30px;
+    }
+  }
