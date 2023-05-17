@@ -262,7 +262,37 @@ button[type="submit"]:hover {
     }
 }
 
+.contenedorPag404{
+    background-image: linear-gradient(to right, rgba(231, 203, 203, 0.13), rgba(0, 0, 0, 0.8)), url('../assets/img/art_3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 15px;
+    
+}
+.contenedorPag404 h1 h2 {
+  display: block;
+  padding: 30px;
+  color: yellow !important;
+  background-color: rgba(250, 1, 1, 0.5);
+}
 
+.contenedorPag404 button{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(22, 22, 22, 0.5);
+  color: #f0e5e5;
+  border-radius: 15%;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
 
 @media (max-width: 576px) {
     body {
