@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #808080;
+  color: #f6f0f0;
+}
+
+.navbar-nav a:hover {
+  color: #333333;
+}
+
+/* index sección1*/
+.content {
+  background-image: linear-gradient(to right, rgba(231, 203, 203, 0.13), rgba(0, 0, 0, 0.8)), url('../assets/img/art_1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 15px;
+}
+
+.contenedor {
+  max-width: 800px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-top: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: f6f0f0;
+}
+
+
+.portfolio-section {
+  margin-top: 50px;
+}
+
+.card a {
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: xx-large;
+  color: #808080;
+}
+
+.card-group {
+  column-gap: 10px;
+  border: 10px #808080;
+}
+
+.card {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: large;
+  color: #808080;
+}
+
+.card-img-top {
+  column-gap: 20px;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-bottom: 10px solid #302f2f;
+}
+
+/*bio*/
+
+.mainBio {
+  padding-top: 5%;
+}
+
+.izquierda {
+  height: 100vh;
+  background-image: url(../assets/img/retrato_bio1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #f6f0f0;
+
+}
+
+.derecha {
+  height: 100vh;
+  background-color: rgb(51, 50, 50);
+  border: 3px solid #f6f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+}
+
+/*portfolio*/
+.seccionGaleria {
+  width: 90%;
+  margin: 0 auto;
+  height: 85vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid rgb(19, 18, 18);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.seccionGaleria img {
+  width: 0px;
+  height: 100%;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: .5s ease;
+}
+
+.seccionGaleria img:hover {
+  width: 30%;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.seccionGaleria:before {
+  content: attr(data-title);
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/** footer**/
+
+.footer {
+  background-color: grey;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.redes {
+  color: #f6f0f0;
+  text-decoration: none;
+}
+
+
+/*contacto*/
+
+.contacto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  background-image: url("../assets/img/art_4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
+  padding-top: 60px;
+}
+
+
+.contacto-container h1 h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  max-width: 50%;
+  padding: 30px;
+  background-image: linear-gradient(to bottom right, #12131246, #413d3cda);
+  border-radius: 20px;
+}
+
+.contacto-container h1 {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.contacto-container h2 {
+  font-size: large;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(5, 5, 5, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  max-height: fit-content;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #808080;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #423853
+}
+
+/*newsletter*/
+.news-section {
+  display: flex;
+  margin-top: 50px;
+  width: 80%;
+  justify-content: space-between;
+  text-align: center;
+  margin-left: 10%;
+}
+
+/*pagina 404*/
+.contenedorPag404 {
+  background-image: linear-gradient(to right, rgba(231, 203, 203, 0.13), rgba(0, 0, 0, 0.8)), url('../assets/img/art_3.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 15px;
+
+}
+
+.contenedorPag404 h1 h2 {
+  display: block;
+  padding: 30px;
+  color: yellow !important;
+  background-color: rgba(250, 1, 1, 0.5);
+}
+
+.contenedorPag404 button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+  background-color: rgba(22, 22, 22, 0.5);
+  color: #f0e5e5;
+  border-radius: 15%;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* media queries*/
+@media screen and (max-width: 768px) {
+  .seccionGaleria {
+    flex-wrap: wrap;
+  }
+
+  .seccionGaleria img {
+    height: 80%;
+  }
+
+  .seccionGaleria img:hover {
+    width: 70%;
+
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-section {
+    height: 300px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .hero-section {
+    height: 400px;
+  }
+
+  .card {
+    width: 50%;
+  }
+}
+
+
+@media (min-width: 769px) {
+  body {
+    font-size: 18px;
+  }
+
+  .hero-section {
+    height: 500px;
+  }
+
+  .card {
+    width: 33.33%;
+  }
+}
+
+
+/* Estilos para pantallas entre 768px y 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contacto-container {
+    max-width: 10px;
+  }
+
+  p {
+    display: none;
+  }
+}
+
+/* Estilos para pantallas menores o iguales a 767px */
+@media (max-width: 767px) {
+  p {
+    display: none;
+  }
+
+  h3 {
+    display: none;
+  }
+}
+
+/*media portfolio*/
+
+@media (max-width: 768px) {
+  .seccionGaleria {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .seccionGaleria img {
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .seccionGaleria img:hover {
+    transform: scale(1.2);
+  }
+}
+
+/*media contacto*/
+@media only screen and (max-width: 992px) {
+
+  /* Pantallas medianas */
+  h1 {
+    font-size: 1rem;
+    background-image: none;
+  }
+
+  h2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+
+  /* Pantallas pequeñas */
+  h1 {
+    font-size: 2rem;
+    background-image: none;
+  }
+
+  h2 {
+    display: none;
+    background-image: none;
+  }
+
+  form {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1366px) {
+  .contacto-container {
+    padding-top: 30px;
+  }
+
+  .contacto-container h1,
+  .contacto-container h2 {
+    max-width: 80%;
+  }
+
+  form {
+    width: 400px;
+    height: 90%;
+  }
+}
