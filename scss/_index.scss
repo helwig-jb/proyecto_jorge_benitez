@@ -1,0 +1,19 @@
+.content {
+    background-image: linear-gradient(to right, rgba(231, 203, 203, 0.13), rgba(0, 0, 0, 0.8)), url('../assets/img/art_1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 15px;
+  }
+  .contenedor {
+    max-width: 800px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 30px;
+  }
+  
